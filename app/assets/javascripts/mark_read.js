@@ -7,7 +7,7 @@ function markAsRead(e) {
 
   var thisLink = $(this).closest('.link')
   var linkId = thisLink.data("link-id");
-
+  this.closest('.link').css('textDecoration','line-through');
   $.ajax({
     type: "PATCH",
     url: "/api/v1/links/" + linkId,
@@ -18,6 +18,7 @@ function markAsRead(e) {
 
 function updateLinkStatus(link) {
   $(`.link[data-link-id=${link.id}]`).find(".read-status").text(link.read);
+
 }
 
 function displayFailure(failureData){

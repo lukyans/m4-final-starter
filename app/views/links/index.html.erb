@@ -37,12 +37,11 @@
     <% current_user.links.each do |link| %>
 
     <tr class="link" data-link-id=<%=link.id%>>
-
-
-            <td class="link-url" ><%=link.url%>
+            <td class="link-url" data=<%=link.url%> ><%=link.url%>
             <td class="link-title"><%=link.title%>
-              <td class="link-unread"><%=link.read%>
+              <td class="read-status"><%=link.read%>
                   <td ><button class="mark-as-read"> Mark as read</button></td>
+
                   <td><%= link_to "Edit", edit_link_path(link) %></td>
 </tr>
 

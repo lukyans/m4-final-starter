@@ -1,6 +1,7 @@
 function searchLinks(a) {
   var filter = this.value.toUpperCase()
   var links = document.querySelectorAll('.link-url, .link-title')
+  // debugger
   for(var i=0; i<links.length; i++){
     var linkName = links[i].innerHTML
     var matchedFilter = linkName.toUpperCase().indexOf(filter)  > -1
@@ -9,5 +10,5 @@ function searchLinks(a) {
 }
 
 $(document).ready(function(){
-  $('.search').on('keyup', searchLinks)
+  $('#search').on('keyup', searchLinks)
 })

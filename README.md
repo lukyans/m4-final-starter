@@ -1,27 +1,36 @@
 # URLockBox
 
-## Final Assessment
+The URLockbox is the project where you can create an account and create a list of your favorite URL's
 
-The URLockbox is a starter app for the final assessment for module 4 of the backend engineering program at Turing School of Software and Design.
+## Production website
 
-Be sure to get familiar with what is already done, and what is not. No features are complete, but there is some set up done for several features. Use commit history if that helps.
-
-### Testing your JS with Selenium
-
-The app has the `selenium-webdriver` gem listed in the `Gemfile` and setup in the `rails_helper.rb`
+[http://agile-basin-29918.herokuapp.com/]
 
 #### Setup
 
-Everything will be installed with Bundle.
+1. Clone down this repo:
 
-You will need to download version 46 of Firefox [here](https://www.softexia.com/windows/web-browsers/firefox-46). If you do have it, make sure it is on version 46. Selenium does not work with all versions of Firefox, so make sure that you are using Firefox 46 or else it will potentially cause you problems.
+`https://github.com/lukyans/m4-final-starter`
 
-If you already have Firefox and it's on a version more recent than 46, the easiest way to downgrade is to uninstall Firefox then install version 46.
+2. Select folder
 
-#### Use
+`$ cd /m4-final-starter`
 
-You can then write capybara feature tests and add `js: true` tag if you'd like your test to use the Selenium WebDriver rather than the default WebDriver.  Your tests will execute and recognize your JavaScript.
+3. Install gems
 
-If you're having problems troubleshooting asynchronous actions (like DOM changes after an AJAX request), [peruse this section of Capybara's docs](https://github.com/teamcapybara/capybara#asynchronous-javascript-ajax-and-friends)
+`$ bundle install`
 
-It is highly suggested that you also check out the Capybara docs and and the section on [selenium-webdriver](https://github.com/teamcapybara/capybara#selenium).
+4. Create and migrate database
+
+`$ rake db:create`
+`$ rake db:migrate`
+
+5. In the file `$ app/javascripts/mark_read.js` and `$ app/javascripts/mark_unread.js` change production url links https://hot-reads-sl.herokuapp.com/api/v1/links to the localhost links http://localhost:3000/api/v1/links
+
+6. Start local server
+
+`$ rails server`
+
+7. In you browser visit this page
+
+`http://localhost:3000`

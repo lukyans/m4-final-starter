@@ -9,5 +9,5 @@ function searchLinks(a) {
 }
 
 $(document).ready(function(){
-  $('.search').on('keyup', searchLinks)
+  $('#search').on('keyup', searchLinks)
 })

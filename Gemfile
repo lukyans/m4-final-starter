@@ -29,7 +29,8 @@ end
 
 group :development, :test do
   gem 'byebug'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '~> 3.6'
+  gem 'rspec-core', '~> 3.6'
   gem 'capybara'
   gem 'launchy'
   gem 'pry'

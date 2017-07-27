@@ -2,7 +2,7 @@ class LinksController < ApplicationController
 
   def index
     if current_user
-      @links = Link.where(user: current_user)
+      @links = current_user.links
       @add_link = Link.new
     else
       redirect_to login_path
@@ -11,9 +11,7 @@ class LinksController < ApplicationController
   end
 
   def create
-    link = Link.new(link_params)
-    link.user = current_user
-
+    link = current_user.links.create(link_params)
     if link.save
       redirect_to links_path
       flash[:success] = "You successfully added a link"

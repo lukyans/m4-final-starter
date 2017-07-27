@@ -51,6 +51,14 @@
    margin-left: 50px;
  }
 
+ .showContent{
+   display: block;
+ }
+
+ .hideContent{
+   display: none
+ }
+
  .buttons {
    justify-content: center;
    display: flex;

@@ -38,6 +38,7 @@
           <td class="read-status"><%=link.read%>
           <td><button class="mark-as-read">Mark as read</button></td>
           <td><%= link_to "Edit", edit_link_path(link) %></td>
+          <td class="hot-read"></td>
         </tr>
         <%elsif link.read == true%>
         <tr class="link" data-link-id=<%=link.id%>>
@@ -46,6 +47,7 @@
           <td class="read-status"><%=link.read%>
           <td><button class="mark-as-unread">Mark as unread</button></td>
           <td><%= link_to "Edit", edit_link_path(link) %></td>
+          <td class="hot-read"></td>
         </tr>
         <%end%>
         <%end%>

@@ -2,6 +2,8 @@
 
 The URLockbox is the project where you can create an account and create a list of your favorite URL's
 
+URLockbox works also works with Rails app Hot Reads. Hot Reads will display the most popular/accessed links from URLockbox users by making API calls.
+
 ## Production website
 
 [http://agile-basin-29918.herokuapp.com/]

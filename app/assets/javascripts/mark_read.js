@@ -18,16 +18,16 @@ function markAsRead(e) {
     var formData = link_url
     $.ajax({
       type: "POST",
-      url: "http://localhost:2000/api/v1/links",
-      //"http://hot-reads-sl.herokuapp.com/api/v1/links/",
+      // url: "http://localhost:2000/api/v1/links",
+      "http://hot-reads-sl.herokuapp.com/api/v1/links/",
       dataType: "json",
       data: {url: formData}
     })
 
     $.ajax({
       type: "GET",
-      url: "http://localhost:2000/api/v1/links",
-      //url: "http://hot-reads-sl.herokuapp.com/api/v1/links/",
+      // url: "http://localhost:2000/api/v1/links",
+      url: "http://hot-reads-sl.herokuapp.com/api/v1/links/",
     }).then(function(data){
       sortHotRead(data)
       { updateHotLink(data)}

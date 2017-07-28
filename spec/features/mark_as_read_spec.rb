@@ -10,14 +10,14 @@ RSpec.describe "can mark links as read", :js => :true do
     fill_in "Title", with: "google page"
 
     click_on "Submit"
-    
+
     link = Link.last
 
     within('.link .read-status') do
       expect(page).to have_text("false")
     end
 
-    click_on "Mark as read"
+    click_button "Mark as read"
 
     within('.link .read-status') do
       expect(page).to have_text("true")

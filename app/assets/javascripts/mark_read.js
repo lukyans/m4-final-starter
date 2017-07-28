@@ -1,4 +1,4 @@
-$( document ).ready(function(){
+$(document).ready(function(){
   $("body").on("click", ".mark-as-read", markAsRead)
 });
 
@@ -18,14 +18,14 @@ function markAsRead(e) {
     var formData = link_url
     $.ajax({
       type: "POST",
-      url: "https://hot-reads-sl.herokuapp.com/api/v1/links",
+      url: "http://localhost:2000/links",
       dataType: "json",
       data: {url: formData}
     })
 
     $.ajax({
       type: "GET",
-      url: "https://hot-reads-sl.herokuapp.com/api/v1/links",
+      url: "http://localhost:2000/api/v1/links",
     }).then(function(data){
       sortHotRead(data)
       { updateHotLink(data)}

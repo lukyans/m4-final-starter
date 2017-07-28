@@ -8,6 +8,7 @@ function markAsRead(e) {
   var linkId = thisLink.data("link-id");
   var link_url = thisLink.children('.link-url')[0].innerText
 
+  debugger
   $.ajax({
     type: "PATCH",
     url: "/api/v1/links/" + linkId,
@@ -18,7 +19,7 @@ function markAsRead(e) {
     var formData = link_url
     $.ajax({
       type: "POST",
-      url: "http://hot-reads-sl.herokuapp.com/api/v1/links/" + linkId,
+      url: "http://hot-reads-sl.herokuapp.com/api/v1/links/",
       dataType: "json",
       data: {url: formData}
     })

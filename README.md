@@ -25,7 +25,7 @@ The URLockbox is the project where you can create an account and create a list o
 `$ rake db:create`
 `$ rake db:migrate`
 
-5. In the file `$ app/javascripts/mark_read.js` and `$ app/javascripts/mark_unread.js` change production url links https://hot-reads-sl.herokuapp.com/api/v1/links to the localhost links http://localhost:3000/api/v1/links
+5. In the file `$ app/javascripts/mark_read.js` change production url links https://hot-reads-sl.herokuapp.com/api/v1/links to the localhost links http://localhost:2000/api/v1/links
 
 6. Start local server
 

@@ -18,19 +18,18 @@ function markAsRead(e) {
     var formData = link_url
     $.ajax({
       type: "POST",
-      url: "http://localhost:2000/links",
+      url: "https://hot-reads-sl.herokuapp.com/api/v1/links",
       dataType: "json",
       data: {url: formData}
     })
 
-  $.ajax({
-    type: "GET",
-    url: "http://localhost:2000/api/v1/links",
-  }).then(function(data){
-    sortHotRead(data){
-      updateHotLink(data)
-    }
-  })
+    $.ajax({
+      type: "GET",
+      url: "https://hot-reads-sl.herokuapp.com/api/v1/links",
+    }).then(function(data){
+      sortHotRead(data)
+      { updateHotLink(data)}
+    })
 }
 
 function updateLinkStatus(link) {
@@ -48,9 +47,9 @@ function updateHotLink(data){
     if (hotLinks[0] == trimed){
       $(link).parent().find('.hot-read').text("TOP LINK!")
     } else if (hotLinks.includes(trimed)){
-      $(link).parent().find('.hot-read').append("HOT!")
+      $(link).parent().find('.hot-read').text("HOT!")
     } else {
-      $(link).parent().find('.hot-read').append("")
+      $(link).parent().find('.hot-read').text("")
         }
     })
   }

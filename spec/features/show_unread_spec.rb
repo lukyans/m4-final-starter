@@ -17,16 +17,10 @@ RSpec.describe "it can filter", :js => :true do
       expect(page).to have_text("false")
     end
 
-    click_button "Mark as read"
+    click_button "Show unread"
 
     within('.link .read-status') do
-      expect(page).to have_text("true")
-    end
-
-    click_button "Show read"
-
-    within('.link .read-status') do
-      expect(page).to have_text("true")
+      expect(page).to have_text("false")
     end
   end
 end

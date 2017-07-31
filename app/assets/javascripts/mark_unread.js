@@ -5,7 +5,7 @@ $("body").on("click", ".mark-as-unread", markAsUnread)
 function markAsUnread(e) {
   e.preventDefault();
   var thisLink = $(this).closest('.link')
-  var linkId = thisLink.data("link-id");
+  var linkId = thisLink.data("link-id"); 
   $.ajax({
     type: "PATCH",
     url: "/api/v1/links/" + linkId,
